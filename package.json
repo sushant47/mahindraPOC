@@ -11,6 +11,8 @@
   },
   "private": true,
   "dependencies": {
+    "@agm/core": "^1.0.0-beta.3",
+    "@agm/js-marker-clusterer": "^1.0.0-beta.3",
     "@angular/animations": "^6.1.0",
     "@angular/common": "^6.1.0",
     "@angular/compiler": "^6.1.0",
@@ -24,9 +26,13 @@
     "@ng-bootstrap/schematics": "^2.0.0-alpha.1",
     "@ngx-translate/core": "^10.0.2",
     "@ngx-translate/http-loader": "^3.0.1",
+    "ag-grid": "^18.1.2",
+    "ag-grid-angular": "^18.1.0",
     "bootstrap": "^4.0.0",
     "core-js": "^2.5.4",
+    "js-marker-clusterer": "^1.0.0",
     "rxjs": "^6.0.0",
+    "save": "^2.3.2",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
