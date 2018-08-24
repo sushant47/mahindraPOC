@@ -3,10 +3,25 @@
   <!-- <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="> -->
 
 <!-- MAIN PAGE START -->
+  <div class="log-in-page" style="display: none;">
+    <div class="login-block">
+      <div class="input-block">
+        <input class="form-control" type="email" placeholder="User Name">
+        <span class="cust-iocn"><i class="fa fa-user"></i></span>
+      </div>
+      <div class="input-block">
+        <input class="form-control" type="password" placeholder="User Password">
+        <span class="cust-iocn"><i class="fa fa-lock"></i></span>
+      </div>
+      <div class="input-block">
+        <button class="log-btn">log in</button>
+      </div>
+    </div>
+  </div>
 	<div class="main-wrapper layout-fill layout-column sideNavContent">
 		
 		<!-- SIDENAV START --> 
-		<div class="sidenav"> 
+		<!--<div class="sidenav"> 
 			<div class="toggle-menu"> 
 				<a href="javascript:void(0)"><span class="menu-icon"><i class="icon-menu"></i></span><span class="menu-label">Menu</span></a>
 			</div>
@@ -20,7 +35,7 @@
 				</ul>
 			</div> 
 		</div>
-		<div class="sidenavOverlay"></div> 
+		<div class="sidenavOverlay"></div> -->
 		<!-- SIDENAV END -->
 		
 		
@@ -39,24 +54,19 @@
 				</div>  
 				<div class="pull-right ct-navbar">
 					<ul class="nav navbar-nav">
-							<li class="dropdown">
-								<a href="javascript:void(0)" class="dropdown-toggle" id="profileDp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">John Miller <i class="icon-settings"></i></a>
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="Registered-user">Registered User <span>78</span></a>
+							</li>  
+							<!--<li class="dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle" id="profileDp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">log out</a>
 								<ul class="dropdown-menu" aria-labelledby="profileDp">
 									<li><a href="#">My Profile</a></li>
 									<li><a href="#">Switch Device</a></li>
 								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="javascript:void(0)" class="dropdown-toggle" id="languageDp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">English <i class="icon-language"></i></a>
-								<ul class="dropdown-menu" aria-labelledby="languageDp">
-									<li><a href="#">English</a></li>
-									<li><a href="#">Spanish</a></li>
-									<li><a href="#">Portuguese</a></li>
-								</ul>
-							</li> 
+							</li>-->
 					</ul>
 				</div>
-				
+
 			</div>
 		</div>
 		<!-- HEADER END -->
@@ -66,81 +76,103 @@
 			<div class="layout-fill layout-column">
 				<div class="title-header">
 					<h3 class="flex-grow">Dashboard</h3>
-					<div class="filter-dp flex">
+					<div class="filter-dp">
 						<select class="form-control">
-							<option>Quarter 2 - 2017</option>
-							<option>Quarter 3 - 2017</option>
-							<option>Quarter 4 - 2017</option>
+              <option>Filter</option>
+							<option>Filter by Region</option>
+              <option>Filter by Crop</option> 
+              <option>Filter by Time & Duration</option>
 						</select>
 					</div>
+          <div class="toggle-switch">
+            <ul>
+              <li class="active"><i class="fa fa-th-large"></i></li>
+              <li><i class="fa fa-globe"></i></li>
+            </ul>
+          </div>
 				</div>
 				<div class="inner-content flex layout-fill">
 					<div class="inner-wrapper">
 						<div class="vertical-content">
-              <div class="key-features clearfix">
-                <ul>
+              <div class="stat-block">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="key-features clearfix">
+                      <ul>
+                       <li>
+                          <div class="key-item">
+                             <div class="key-hed">M & M app usres</div> 
+                             <div class="key-count">120</div> 
+                         </div>
+                      </li>
                   <li>
                     <div class="key-item">
-                        <div class="key-hed"><i class="fa fa-user"></i> Demo text</div>
+                        <div class="key-hed">Non M & M</div>
+                        <div class="key-count">150</div> 
+                    </div>
+                  </li>
+                  <li>
+                    <div class="key-item">
+                        <div class="key-hed">Farma</div>
                         <div class="key-count">1000</div> 
                     </div>
                   </li>
                   <li>
                     <div class="key-item">
-                        <div class="key-hed"><i class="fa fa-user"></i> Demo text</div>
-                        <div class="key-count">1000</div> 
-                    </div>
-                  </li>
-                  <li>
-                    <div class="key-item">
-                        <div class="key-hed"><i class="fa fa-user"></i> Demo text</div>
-                        <div class="key-count">1000</div> 
-                    </div>
-                  </li>
-                  <li>
-                    <div class="key-item">
-                        <div class="key-hed"><i class="fa fa-user"></i> Demo text</div>
-                        <div class="key-count">1000</div> 
-                    </div>
-                  </li>
-                  <li>
-                    <div class="key-item">
-                        <div class="key-hed"><i class="fa fa-user"></i> Demo text</div>
-                        <div class="key-count">1000</div> 
+                        <div class="key-hed">Frequently leasing member</div>
+                        <div class="key-count">600</div> 
                     </div>
                   </li>
                 </ul>
               </div>
+                  </div>
+                  <div class="col-md-9">
+                    <div class="grid-data">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Name</th>
+                            <th>Name</th>
+                            <th>Name</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Name</td>
+                            <td>Name</td>
+                            <td>Name</td>
+                            <td>Name</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="charts-block">
                 <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                     <div class="ct-panel">
-                      <h4 class="sub-title"><span>Graph 1</span></h4>
+                      <h4 class="sub-title"><span>Registered Users</span></h4>
                       <div class="graph-content">
                         <img src="assets/images/graph1.png">
                         
                       </div>
                     </div>
                   </div> 
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                     <div class="ct-panel">
-                      <h4 class="sub-title"><span>Graph 2</span></h4>
+                      <h4 class="sub-title"><span>FAAS</span></h4>
                       <div class="graph-content">
                         <img src="assets/images/graph2.png">
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-4">
-                    <div class="ct-panel">
-                      <h4 class="sub-title"><span>Graph 3</span></h4>
-                      <div class="graph-content">
-                        <img src="assets/images/graph1.png">
-                      </div>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
-							<div class="row">
+							<!--<div class="row">
 								<div class="col-md-5 corporate-sec">
 									<h4 class="sub-title">Demo Text</h4>
 									<div class="kpi-list">
@@ -288,7 +320,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div>-->
 						</div>
 					</div>
 				</div>

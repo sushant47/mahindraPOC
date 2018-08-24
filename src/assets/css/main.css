@@ -114,7 +114,7 @@ a:hover,a:focus,a:active{outline: none;text-decoration: none;outline-offset: non
 .layout-column, .layout-row {display: -webkit-box;display: -webkit-flex;display: flex;}
 .flex{display: -webkit-box;display: -webkit-flex;display: flex;}
 .flex-grow {-webkit-box-flex: 1;-webkit-flex: 1;flex: 1;}
-.header{background: #fff;color: #666; height: 70px;padding: 10px 28px;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;flex-direction: column;}
+.header{background: #252525 ;color: #666; height: 70px;padding: 10px 28px;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;flex-direction: column;}
 .brand-logo,.fitsap-logo{display: inline-block;vertical-align: middle;}
 .brand-logo img{max-height: 33px;}
 .fitsap-logo {border-left: 1px solid #d6d6d6;margin-left: 15px;padding: 5px 0px 5px 15px;}
@@ -128,7 +128,7 @@ a:hover,a:focus,a:active{outline: none;text-decoration: none;outline-offset: non
 /*.bg-content{background: url('../images/content-bg.png') no-repeat center bottom;background-size: cover;}*/
 .primary-color{background-color: #f2f2f2; color: #000000}
 .secondary-color{color: #f0ab00;}
-.title-header{color: #000000;min-height: 50px;display: -webkit-box;display: -webkit-flex;display: flex;-webkit-box-align: center;-webkit-align-items: center;align-items: center;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;flex-direction: row;}
+.title-header{background: rgba(0,0,0,0.02); color: #000000;min-height: 50px;display: -webkit-box;display: -webkit-flex;display: flex;-webkit-box-align: center;-webkit-align-items: center;align-items: center;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;flex-direction: row;}
 .filter-dp{margin-right: 30px;position: relative;}
 .ct-dropdown{position: relative;}
 .ct-dropdown:before,
@@ -137,7 +137,7 @@ a:hover,a:focus,a:active{outline: none;text-decoration: none;outline-offset: non
 .filter-dp .form-control option, .ct-dropdown .form-control option{color: #000;background: #fff;line-height: 50px;}
 .filter-dp .form-control{padding: 0px 20px 0px 10px;min-height: 50px;line-height: 50px;}
 .title-header h3{margin: 0px;font-size: 20px;text-transform: uppercase;font-weight: 600;padding: 15px 30px;}
-.sideNavContent{padding-left: 60px;}
+.sideNavContent{padding-left: 0px;}
 .sidenav{position: fixed;z-index: 1000;overflow:hidden;overflow-y:auto;background: #01080e;width: 60px;left: 0;top: 0;height: 100%;color: #fff;transition: 200ms linear 0s;-ms-transition: 200ms linear 0s;-moz-transition: 200ms linear 0s;-webkit-transition: 200ms linear 0s;}
 .sidenav:hover{width: 250px;}
 .sidenavOverlay{position: fixed;z-index: 999;left: 0;height: 0;height: 100%;width: 100%;background: rgba(0,0,0,0.5);visibility: hidden;opacity: 0;transition: 300ms ease-in-out 0s;-ms-transition: 300ms ease-in-out 0s;-moz-transition: 300ms ease-in-out 0s;-webkit-transition: 300ms ease-in-out 0s;}
@@ -207,7 +207,8 @@ a:hover,a:focus,a:active{outline: none;text-decoration: none;outline-offset: non
     display: table-cell;
     vertical-align: middle;
     padding: 0 30px;
-    font-size: 14px;
+    font-size: 17px;
+    color: #e31837;
     font-weight: 500;
     border-bottom: 1px solid #e5e5e5e5;
 }
@@ -394,19 +395,35 @@ ul.slick-dots {bottom: 40px;}
 	margin-bottom:30px;
 }
 /*--------end-corporate-leter---------*/
-.brand-logo a {
+.brand-logo a, .brand-logo a:hover {
     font-size: 26px;
     font-weight: 700;
     color: #ffffff;
     text-shadow: 0 0 4px black;
 }
 /*new-css*/
+.Registered-user {
+    color: #ffffff !important;
+    vertical-align: middle;
+    display: block !important;
+}
+.Registered-user span {
+    /* display: block; */
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+}
+.ct-navbar {
+    position: relative;
+    z-index: 1;
+}
 .ct-navbar .nav {
     display: block !important;
 }
 .key-features {
     background: #e31837;
-    padding: 20px;
+    padding: 0;
     border-radius: 5px;
     margin: 0 0 20px;
 }
@@ -415,16 +432,17 @@ ul.slick-dots {bottom: 40px;}
     margin: 0;
 }
 .key-features li {
-    list-style-type:  none;
+    list-style-type: none;
     float: left;
-    width: 20%;
-    border-right: 1px solid rgba(255,255,255,0.3);
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 .key-features li:last-child {
-    border-right: 0;
+    border-bottom: 0;
 }
 .key-item {
-    padding: 10px 20px 10px 40px;
+    padding: 12px 40px;
+    cursor: pointer;
 }
 .key-hed {
     font-size: 16px;
@@ -434,12 +452,89 @@ ul.slick-dots {bottom: 40px;}
     color: #ffffff;
     font-size: 30px;
     font-weight: 500;
-    padding-left: 14px;
 }
 .graph-content {
     text-align: center;
     padding: 20px;
 }
+.key-features li.active {
+    background: rgba(0,0,0,0.2);
+    border-right: 0;
+}
+.toggle-switch ul {
+    margin: 0;
+    padding: 0;
+}
+.toggle-switch li {
+    list-style-type: none;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+}
+.toggle-switch li.active {
+    background: #e31837;
+    color: #fff;
+}
+.table th, .table td {
+    font-size: 14px;
+}
+/*log-in page*/
+.log-in-page {
+    height: 100%;
+}
+.login-block {
+    width: 40%;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    box-shadow: 0 0 3px #777676;
+    border-radius: 6px;
+    padding: 40px;
+}
+.input-block {
+    position: relative;
+    margin: 10px 0;
+}
+.input-block .form-control {
+    height: 40px;  
+    border-radius: 0;
+    border:  1px solid #e5e5e5;
+    box-shadow: 0 0 0;
+    background: #ffffff;
+    font-size: 14px;
+    padding-left: 50px;
+}
+.cust-iocn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+}
+.log-btn {
+    background: #e31837;
+    border: 1px solid #e31837;
+    display: block;
+    height: 40px;
+    width: 110px;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px auto 0;
+}
+
 /*/end new css*/
 /* MEDIA QUARIES*/
 @media screen and (min-width:768px){
