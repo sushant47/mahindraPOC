@@ -1,56 +1,303 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+
   <!-- <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="> -->
-</div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/Link">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/Contacts">Contacts</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-<div class=”container”>
+<!-- MAIN PAGE START -->
+	<div class="main-wrapper layout-fill layout-column sideNavContent">
+		
+		<!-- SIDENAV START --> 
+		<div class="sidenav"> 
+			<div class="toggle-menu"> 
+				<a href="javascript:void(0)"><span class="menu-icon"><i class="icon-menu"></i></span><span class="menu-label">Menu</span></a>
+			</div>
+			<div class="sidenavmenu">  
+				<ul> 
+					<li><a routerLink="/admin"><span class="menu-icon"><i class="icon-admin"></i></span><span class="menu-label">Admin</span></a></li>
+					<li class="active"><a href="javascript:void(0)"><span class="menu-icon"><i class="icon-dashboard"></i></span><span class="menu-label">Dashboard</span></a></li>
+					<li><a href="javascript:void(0)"><span class="menu-icon"><i class="icon-statistics"></i></span><span class="menu-label">Statistics</span></a></li>
+					<li><a href="javascript:void(0)"><span class="menu-icon"><i class="icon-monitor"></i></span><span class="menu-label">Plasma View</span></a></li>
+					<li><a href="javascript:void(0)"><span class="menu-icon"><i class="icon-donate"></i></span><span class="menu-label">Donate</span></a></li>
+				</ul>
+			</div> 
+		</div>
+		<div class="sidenavOverlay"></div> 
+		<!-- SIDENAV END -->
+		
+		
+		<!-- HEADER START -->
+		<div class="header flex">
+			<div class="outer clearfix">
+				<div class="pull-left ct-navbar-brand">
+					<div class="brand-logo"><a href="javascript:void(0)">Logo Here</a></div>
+					<!--<div class="brand-logo"><img src="assets/images/brand-logo.png" alt=""></div>
+					<div class="fitsap-logo"><img src="assets/images/fitsap-logo.png" alt="FitSAP"></div>-->
+				</div>
+				<div class="mobile-menu-toggle pull-right"> 
+					<a href="javascript:void(0)">
+						<span></span>  
+					</a> 
+				</div>  
+				<div class="pull-right ct-navbar">
+					<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="javascript:void(0)" class="dropdown-toggle" id="profileDp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">John Miller <i class="icon-settings"></i></a>
+								<ul class="dropdown-menu" aria-labelledby="profileDp">
+									<li><a href="#">My Profile</a></li>
+									<li><a href="#">Switch Device</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="javascript:void(0)" class="dropdown-toggle" id="languageDp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">English <i class="icon-language"></i></a>
+								<ul class="dropdown-menu" aria-labelledby="languageDp">
+									<li><a href="#">English</a></li>
+									<li><a href="#">Spanish</a></li>
+									<li><a href="#">Portuguese</a></li>
+								</ul>
+							</li> 
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		<!-- HEADER END -->
+		
+		<!-- MAIN CONTENT START -->
+		<div class="main-content bg-content  primary-color flex layout-fill">
+			<div class="layout-fill layout-column">
+				<div class="title-header">
+					<h3 class="flex-grow">Dashboard</h3>
+					<div class="filter-dp flex">
+						<select class="form-control">
+							<option>Quarter 2 - 2017</option>
+							<option>Quarter 3 - 2017</option>
+							<option>Quarter 4 - 2017</option>
+						</select>
+					</div>
+				</div>
+				<div class="inner-content flex layout-fill">
+					<div class="inner-wrapper">
+						<div class="vertical-content">
+              <div class="key-features clearfix">
+                <ul>
+                  <li>
+                    <div class="key-item">
+                        <div class="key-hed"><i class="fa fa-user"></i> Demo text</div>
+                        <div class="key-count">1000</div> 
+                    </div>
+                  </li>
+                  <li>
+                    <div class="key-item">
+                        <div class="key-hed"><i class="fa fa-user"></i> Demo text</div>
+                        <div class="key-count">1000</div> 
+                    </div>
+                  </li>
+                  <li>
+                    <div class="key-item">
+                        <div class="key-hed"><i class="fa fa-user"></i> Demo text</div>
+                        <div class="key-count">1000</div> 
+                    </div>
+                  </li>
+                  <li>
+                    <div class="key-item">
+                        <div class="key-hed"><i class="fa fa-user"></i> Demo text</div>
+                        <div class="key-count">1000</div> 
+                    </div>
+                  </li>
+                  <li>
+                    <div class="key-item">
+                        <div class="key-hed"><i class="fa fa-user"></i> Demo text</div>
+                        <div class="key-count">1000</div> 
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="charts-block">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="ct-panel">
+                      <h4 class="sub-title"><span>Graph 1</span></h4>
+                      <div class="graph-content">
+                        <img src="assets/images/graph1.png">
+                        
+                      </div>
+                    </div>
+                  </div> 
+                  <div class="col-md-4">
+                    <div class="ct-panel">
+                      <h4 class="sub-title"><span>Graph 2</span></h4>
+                      <div class="graph-content">
+                        <img src="assets/images/graph2.png">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="ct-panel">
+                      <h4 class="sub-title"><span>Graph 3</span></h4>
+                      <div class="graph-content">
+                        <img src="assets/images/graph1.png">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+							<div class="row">
+								<div class="col-md-5 corporate-sec">
+									<h4 class="sub-title">Demo Text</h4>
+									<div class="kpi-list">
+										<ul>
+											<li>
+												<div class="kpi-content">
+													<span class="kpi-icon"><i class="icon-footsteps"></i></span>
+													<span class="kpi-count secondary-color">98.92K <small>Steps</small></span>
+													<span class="kpi-label text-right">Demo text</span>
+												</div>
+											</li>
+											<li>
+												<div class="kpi-content">
+													<span class="kpi-icon"><i class="icon-average-steps"></i></span>
+													<span class="kpi-count secondary-color">3.29K <small>Steps</small></span>
+													<span class="kpi-label text-right">Demo text <small>(lorem ipsume simply dummy text)</small></span>
+												</div>
+											</li>
+											<li>
+												<div class="kpi-content">
+													<span class="kpi-icon"><i class="icon-distancecovered"></i></span>
+													<span class="kpi-count secondary-color">7.6K <span>KM</span></span>
+													<span class="kpi-label text-right">Demo Text</span>
+												</div>
+											</li>
+											<li>
+												<div class="kpi-content">
+													<span class="kpi-icon"><i class="icon-participant"></i></span>
+													<span class="kpi-count secondary-color">500</span>
+													<span class="kpi-label text-right">Demo Text</span>
+												</div>
+											</li>
+											<li>
+												<div class="kpi-content">
+													<span class="kpi-icon"><i class="icon-target"></i></span>
+													<span class="kpi-count secondary-color">30% <small>Demo Text</small></span>
+													<span class="kpi-label text-right">Demo Text</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-7 personal-sec">
+									<h4 class="sub-title">Personal</h4>
+									<div class="personal-dashboard-info">
+										<div class="total-steps-avg">
+											<div class="kpi-content">
+												<span class="kpi-icon"><i class="icon-happy"></i></span>
+												<span class="kpi-count secondary-color">7.50K <small>Steps</small></span>
+												<span class="kpi-label">lorem ipsume simply dummy text, <strong>lorem ipsume!</strong></span>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="ct-panel leaderboard-panel">
+													<h4 class="sub-title"><span>Demo Text</span></h4> 
+													<div class="leaderboard-list">
+														<div class="row">
+															<div class="col-xs-6">
+																<ul>
+																	<li>
+																		<div class="lead-count">1</div>
+																		<span class="lead-name">Demo Text</span> 
+																		<small>Steps</small> 
+																		<span class="lead-unit">5.2K</span>
+																	</li>
+																	<li>
+																		<div class="lead-count">2</div>
+																		<span class="lead-name">Demo Text</span>
+																		<small>Steps</small> 
+																		<span class="lead-unit">5K</span>
+																	</li>
+																	<li>
+																		<div class="lead-count">3</div>
+																		<span class="lead-name">Demo Text</span>  
+																		<small>Steps</small> 
+																		<span class="lead-unit">4.8K</span>
+																	</li>
+																	<li>
+																		<div class="lead-count">4</div>
+																		<span class="lead-name">Demo Text</span>
+																		<small>Steps</small> 
+																		<span class="lead-unit">4.6K</span>
+																	</li>
+																	<li>
+																		<div class="lead-count">5</div>
+																		<span class="lead-name">Demo Text</span>
+																		<small>Steps</small> 
+																		<span class="lead-unit">4.3K</span>
+																	</li>
+																</ul>
+															</div>
+															<div class="col-xs-6">
+																<ul>
+																	<li>
+																		<div class="lead-count">6</div>
+																		<span class="lead-name">Demo Text</span> 
+																		<small>Steps</small> 
+																		<span class="lead-unit">5.2K</span>
+																	</li>
+																	<li>
+																		<div class="lead-count">7</div>
+																		<span class="lead-name">DDemo Text </span>
+																		<small>Steps</small> 
+																		<span class="lead-unit">5K</span>
+																	</li>
+																	<li>
+																		<div class="lead-count">8</div>
+																		<span class="lead-name">Demo Text</span>  
+																		<small>Steps</small> 
+																		<span class="lead-unit">4.8K</span>
+																	</li>
+																	<li>
+																		<div class="lead-count">9</div>
+																		<span class="lead-name">Demo Text</span>
+																		<small>Steps</small> 
+																		<span class="lead-unit">4.6K</span>
+																	</li>
+																	<li>
+																		<div class="lead-count">10</div>
+																		<span class="lead-name">Demo Text</span>
+																		<small>Steps</small> 
+																		<span class="lead-unit">4.3K</span>
+																	</li>
+																</ul> 
+															</div> 
+														</div>
+													</div>
+													<div class="panel-bottom secondary-color">
+														<div class="lead-content-bottom">
+															<div class="table-cell leadRank">20<sup>th</sup></div>
+															<div class="table-cell text-right">
+																<span>Demo Text</span>
+																<span>Demo Text</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="ct-panel workout-panel">
+													<h4 class="sub-title"><span>Demo Text</span></h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- MAIN CONTENT END -->
+		
+	</div>
+<!-- JS START --> 
+<!--<div class="container">
   <router-outlet></router-outlet>
-</div>
-<app-my-sample></app-my-sample>
-
-<h1 translate>Title</h1>
-
-<div>
-  {{ 'Intro' | translate }}
-</div>
-<button (click)="switchLanguage('fr')">fr</button>
+</div>-->

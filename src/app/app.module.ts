@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app.routes.module';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { AdminComponent } from './admin/admin.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -21,7 +22,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     MySampleComponent,
     LinkComponent,
-    ContactsComponent
+    ContactsComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
