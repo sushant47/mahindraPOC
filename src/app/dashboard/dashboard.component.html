@@ -1,0 +1,147 @@
+<div class="main-wrapper layout-fill layout-column sideNavContent">
+
+    <div class="header flex">
+      <div class="outer clearfix">
+        <div class="pull-left ct-navbar-brand">
+          <div class="brand-logo">
+            <a href="javascript:void(0)">Logo Here</a>
+          </div>
+        </div>
+        <div class="mobile-menu-toggle pull-right">
+          <a href="javascript:void(0)">
+            <span></span>
+          </a>
+        </div>
+        <div class="pull-right ct-navbar">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="Registered-user">Registered User
+                <span>78</span>
+              </a>
+            </li>
+            <!--<li class="dropdown">
+                  <a href="javascript:void(0)" class="dropdown-toggle" id="profileDp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">log out</a>
+                  <ul class="dropdown-menu" aria-labelledby="profileDp">
+                    <li><a href="#">My Profile</a></li>
+                    <li><a href="#">Switch Device</a></li>
+                  </ul>
+                </li>-->
+          </ul>
+        </div>
+  
+      </div>
+    </div>
+    <!-- HEADER END -->
+  
+    <!-- MAIN CONTENT START -->
+    <div class="main-content bg-content  primary-color flex layout-fill">
+      <div class="layout-fill layout-column">
+        <div class="title-header">
+          <h3 class="flex-grow">Dashboard</h3>
+          <div class="filter-dp">
+            <select class="form-control">
+              <option>Filter</option>
+              <option>Filter by Region</option>
+              <option>Filter by Crop</option>
+              <option>Filter by Time & Duration</option>
+            </select>
+          </div>
+          <div class="toggle-switch">
+            <ul>
+              <li>
+                <i class="fa fa-th-large"></i>
+              </li>
+              <li class="active">
+                <i class="fa fa-globe"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="inner-content flex layout-fill">
+          <div class="inner-wrapper">
+            <div class="vertical-content">
+              <div class="stat-block">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="key-features clearfix">
+                      <ul>
+                        <li>
+                          <div class="key-item">
+                            <div class="key-hed">M & M app usres</div>
+                            <div class="key-count">120</div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="key-item">
+                            <div class="key-hed">Non M & M</div>
+                            <div class="key-count">150</div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="key-item">
+                            <div class="key-hed">Farma</div>
+                            <div class="key-count">1000</div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="key-item">
+                            <div class="key-hed">Frequently leasing member</div>
+                            <div class="key-count">600</div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-9">
+                    <div class="grid-data">
+                        <agm-map style="height: 300px" [latitude]="18.5136703" [longitude]="73.9117831">
+                            <agm-marker-cluster [imagePath]="'https://googlemaps.github.io/js-marker-clusterer/images/m'">
+                              <agm-marker *ngFor="let marker of markers" [latitude]="marker.latitude" [longitude]="marker.longitude"></agm-marker>
+                            </agm-marker-cluster>
+                          </agm-map>
+                      <app-grid-application></app-grid-application>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="charts-block">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="ct-panel">
+                      <h4 class="sub-title">
+                        <span>Registered Users</span>
+                      </h4>
+                      <div class="graph-content">
+                          <iframe width="560" height="315" src="https://www.knowi.com/w/MK0QMBlgzXnMTWFRvFnZp1Vt9DdQ6ipXrUZ9ugOt0pLoie" frameborder="0" allowfullscreen></iframe>
+  
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="ct-panel">
+                      <h4 class="sub-title">
+                        <span>FAAS</span>
+                      </h4>
+                      <div class="graph-content">
+                        <img src="assets/images/graph2.png">
+                      </div>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MAIN CONTENT END -->
+  
+  </div>
+  
+  <!-- JS START -->
+  <!--<div class="container">
+    <router-outlet></router-outlet>
+  </div>-->
