@@ -4,7 +4,7 @@
     <div class="outer clearfix">
       <div class="pull-left ct-navbar-brand">
         <div class="brand-logo">
-          <a href="javascript:void(0)">Logo Here</a>
+          <img src="assets/images/logo-sarthi.png">
         </div>
       </div>
       <div class="mobile-menu-toggle pull-right">
@@ -17,6 +17,11 @@
           <li class="dropdown">
             <a href="javascript:void(0)" class="Registered-user">Registered User
               <span>78</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="logout">
+              Log Out
             </a>
           </li>
           <!--<li class="dropdown">
@@ -48,11 +53,11 @@
         </div>
         <div class="toggle-switch">
           <ul>
-            <li>
-              <i class="fa fa-th-large"></i>
+            <li [ngClass]="{'active': togglevalue === false}">
+              <i class="fa fa-th-large" (click)="toggleView($event)"></i>
             </li>
-            <li class="active">
-              <i class="fa fa-globe"></i>
+            <li [ngClass]="{'active': togglevalue === true}">
+              <i class="fa fa-globe" (click)="toggleView($event)"></i>
             </li>
           </ul>
         </div>
@@ -63,24 +68,28 @@
             <div class="stat-block">
               <div class="row">
                 <div class="col-md-3">
-                  <div class="key-features clearfix">
+                  <div class="key-features clearfix" *ngIf="nonMahindraUsers !== ''">
                     <ul>
-                      <li>
-                        <div class="key-item">
+                      <li (click)="listClick($event, item)" [ngClass]="{'active': selectedItem == item}" *ngFor="let item of groups">
+                        <!-- <div class="key-item" *ngIf="mahindraUsers!== ''">
                           <div class="key-hed">M & M app usres</div>
-                          <div class="key-count">120</div>
+                          <div class="key-count">{{mahindraUsers}}</div>
+                        </div> -->
+                        <div class="key-item">
+                          <div class="key-hed">{{item.name}}</div>
+                          <div class="key-count">{{item.value}}</div>
                         </div>
                       </li>
-                      <li>
-                        <div class="key-item">
+                      <!-- <li>
+                        <div class="key-item" *ngIf="nonMahindraUsers!== ''">
                           <div class="key-hed">Non M & M</div>
-                          <div class="key-count">150</div>
+                          <div class="key-count">{{nonMahindraUsers}}</div>
                         </div>
                       </li>
                       <li>
-                        <div class="key-item">
+                        <div class="key-item" *ngIf="withoutTractors!== ''">
                           <div class="key-hed">Farma</div>
-                          <div class="key-count">1000</div>
+                          <div class="key-count">{{withoutTractors}}</div>
                         </div>
                       </li>
                       <li>
@@ -88,17 +97,29 @@
                           <div class="key-hed">Frequently leasing member</div>
                           <div class="key-count">600</div>
                         </div>
-                      </li>
+                      </li> -->
                     </ul>
                   </div>
                 </div>
                 <div class="col-md-9">
                   <div class="grid-data">
-                    <agm-map style="height: 300px" [latitude]="18.5136703" [longitude]="73.9117831">
+                    <!-- <iframe *ngIf="selectedItem && (selectedItem.name === 'M & M app usres')" width="560" height="315" src="https://www.knowi.com/w/TVKZw5EYJtJ4Kisceagcuv0ip7isYCNm1PZCJYZfIiigqjEie" frameborder="0" allowfullscreen></iframe> -->
+                    <agm-map style="height: 355px" [latitude]="18.5281382" [longitude]="73.8825513">
                       <agm-marker-cluster [imagePath]="'https://googlemaps.github.io/js-marker-clusterer/images/m'">
-                        <agm-marker *ngFor="let marker of markers" [latitude]="marker.latitude" [longitude]="marker.longitude"></agm-marker>
+                      <agm-marker *ngFor="let marker of markers" [latitude]="marker.latitude" [longitude]="marker.longitude">
+                        <agm-info-window>
+
+                          <div>
+                            <a (click)="onClickInfoView({id:m.id})">{{marker.toolTip.growthIndex}}</a>
+                            <br>
+                            <a (click)="onClickInfoView({id:m.id})">{{marker.toolTip.userWithoutTractors}}</a>
+                          </div>
+
+                        </agm-info-window>
+                      </agm-marker>
                       </agm-marker-cluster>
                     </agm-map>
+                    <div *ngIf="togglevalue"></div>
                     <app-grid-application></app-grid-application>
                   </div>
 
