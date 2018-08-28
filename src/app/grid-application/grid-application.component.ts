@@ -7,7 +7,7 @@ import { GridOptions } from 'ag-grid';
 })
 export class GridApplicationComponent implements OnInit {
 
-  private gridOptions: GridOptions;
+  public gridOptions: GridOptions;
 
   constructor() {
     this.gridOptions = <GridOptions>{};

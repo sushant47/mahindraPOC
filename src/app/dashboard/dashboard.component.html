@@ -1,5 +1,7 @@
 <div class="main-wrapper layout-fill layout-column sideNavContent">
-
+    <div class="loader" *ngIf="tractorBrands.length <= 0">
+        <div class="loader-img"><img src="assets/images/logo-sarthi.png"></div>
+      </div>
   <div class="header flex">
     <div class="outer clearfix">
       <div class="pull-left ct-navbar-brand">
@@ -42,7 +44,7 @@
   <div class="main-content bg-content  primary-color flex layout-fill">
     <div class="layout-fill layout-column">
       <div class="title-header">
-        <h3 class="flex-grow">Dashboard</h3>
+        <h3 class="flex-grow">Saarthi Dashboard</h3>
         <div class="filter-dp">
           <select class="form-control">
             <option>Filter</option>
@@ -80,31 +82,20 @@
                           <div class="key-count">{{item.value}}</div>
                         </div>
                       </li>
-                      <!-- <li>
-                        <div class="key-item" *ngIf="nonMahindraUsers!== ''">
-                          <div class="key-hed">Non M & M</div>
-                          <div class="key-count">{{nonMahindraUsers}}</div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="key-item" *ngIf="withoutTractors!== ''">
-                          <div class="key-hed">Farma</div>
-                          <div class="key-count">{{withoutTractors}}</div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="key-item">
-                          <div class="key-hed">Frequently leasing member</div>
-                          <div class="key-count">600</div>
-                        </div>
-                      </li> -->
                     </ul>
                   </div>
                 </div>
                 <div class="col-md-9">
                   <div class="grid-data">
-                    <!-- <iframe *ngIf="selectedItem && (selectedItem.name === 'M & M app usres')" width="560" height="315" src="https://www.knowi.com/w/TVKZw5EYJtJ4Kisceagcuv0ip7isYCNm1PZCJYZfIiigqjEie" frameborder="0" allowfullscreen></iframe> -->
-                    <agm-map style="height: 355px" [latitude]="18.5281382" [longitude]="73.8825513">
+                    <iframe *ngIf="selectedItem && (selectedItem.name === 'M & M App Users') && togglevalue" width="1000" height="315" src="https://www.knowi.com/w/ycW9KuJ5PQNn70oEHmVwlvzcAZ8FEEu78w6oYe2D7ZUie" frameborder="0" allowfullscreen></iframe>
+                    <iframe *ngIf="selectedItem && (selectedItem.name === 'M & M App Users') && !togglevalue" width="1000" height="315" src="https://www.knowi.com/w/htrOg7qmrRYjmxYQrUups2IfPVYFns3ILe6XFpNWYygie" frameborder="0" allowfullscreen></iframe>
+                    <iframe *ngIf="selectedItem && (selectedItem.name === 'Non M & M') && togglevalue" width="560" height="315" src="https://www.knowi.com/w/Jlorpy3ffNfbc1bp0HQu1KisqjcJB7jgoEqzU2VQxaMYie" frameborder="0" allowfullscreen></iframe>
+                    <iframe *ngIf="selectedItem && (selectedItem.name === 'Non M & M') && !togglevalue" width="560" height="315" src="https://www.knowi.com/w/UlI1iir9EFuiiyWPiiz72iiuh1CMUlssX3Z0smcVO5tNvsIie" frameborder="0" allowfullscreen></iframe>
+                    <iframe *ngIf="selectedItem && (selectedItem.name === 'No Tracktors') && togglevalue" width="560" height="315" src="https://www.knowi.com/w/KKtLqqffKBuU6XKQYZS3XO5kDgM5zy3qcaUZipXR0iiDcie" frameborder="0" allowfullscreen></iframe>
+                    <iframe *ngIf="selectedItem && (selectedItem.name === 'No Tracktors') && !togglevalue" width="560" height="315" src="https://www.knowi.com/w/1CII4YM18LH503LRvqYtPjLwwkf4HNsZisWq1oCiie4hwie" frameborder="0" allowfullscreen></iframe>
+                    <iframe *ngIf="selectedItem && (selectedItem.name === 'Frequently leasing member') && togglevalue" width="560" height="315" src="https://www.knowi.com/w/gisobs8TMipwFiilXKAwGuMii3GKxxisqIxii537DJJWfdlIoie" frameborder="0" allowfullscreen></iframe>
+                    <iframe *ngIf="selectedItem && (selectedItem.name === 'Frequently leasing member') && !togglevalue" width="560" height="315" src="https://www.knowi.com/w/7DlogmFOC9lPSDkkattkL1CtY7VDMExGfPL2FlVOI1kie" frameborder="0" allowfullscreen></iframe>
+                    <!-- <agm-map style="height: 355px" [latitude]="18.5281382" [longitude]="73.8825513">
                       <agm-marker-cluster [imagePath]="'https://googlemaps.github.io/js-marker-clusterer/images/m'">
                       <agm-marker *ngFor="let marker of markers" [latitude]="marker.latitude" [longitude]="marker.longitude">
                         <agm-info-window>
@@ -118,10 +109,10 @@
                         </agm-info-window>
                       </agm-marker>
                       </agm-marker-cluster>
-                    </agm-map>
-                    <div *ngIf="togglevalue"></div>
+                    </agm-map> -->
+                    <!-- <div *ngIf="togglevalue"></div>
                     <app-grid-application></app-grid-application>
-                  </div>
+                  </div> -->
 
                 </div>
               </div>
@@ -134,7 +125,7 @@
                       <span>Registered Users</span>
                     </h4>
                     <div class="graph-content">
-                      <iframe width="560" height="315" src="https://www.knowi.com/w/MK0QMBlgzXnMTWFRvFnZp1Vt9DdQ6ipXrUZ9ugOt0pLoie" frameborder="0"
+                      <iframe height="315" src="https://www.knowi.com/w/MK0QMBlgzXnMTWFRvFnZp1Vt9DdQ6ipXrUZ9ugOt0pLoie" frameborder="0"
                         allowfullscreen></iframe>
 
                     </div>
@@ -146,16 +137,56 @@
                       <span>FAAS</span>
                     </h4>
                     <div class="graph-content">
-                      <iframe width="560" height="315" src="https://www.knowi.com/w/urEtqzfhii29MhCV8UhA2ZrDEF1NymipnisiicP7Ee0zRe0ie" frameborder="0"
+                      <iframe height="315" src="https://www.knowi.com/w/urEtqzfhii29MhCV8UhA2ZrDEF1NymipnisiicP7Ee0zRe0ie" frameborder="0"
                         allowfullscreen></iframe>
 
                     </div>
                   </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="ct-panel">
+                      <h4 class="sub-title">
+                        <span>Third Party Data Type</span>
+        
+                      </h4>
+                      <div class="dropdown">
+                          <a href="javascript:void(0)" class="dropdown-toggle" id="profileDp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Rainfall</a>
+                          <ul class="dropdown-menu" aria-labelledby="profileDp">
+                    
+                            <li><a >Mandi Prices</a></li>
+                            <li><a >MNEREGA Wages</a></li>
+                            <li><a >Reservoir Level</a></li>
+                            <li><a >Road Construction Under PMGSY</a></li>
+                            <li><a >Irrigation Potential Under PMGSY</a></li>
+                            <li><a >Rural Deposit</a></li>
+                            <li><a >Crop Sowing</a></li>
+                            <li><a >Tractor Sales by Competition</a></li>
+                            <li><a >Geo Spatial Data</a></li>
+                          </ul>
+                        </div>
+                        <div class="graph-content">
+                            <iframe  height="315" src="https://www.knowi.com/w/tWUWwMOe4bD3QoTCFxLTJLynHZqfD25WMHxAOipdCEDUie" frameborder="0"
+                              allowfullscreen></iframe>
+      
+                          </div>
+                    </div>
+                  </div>
+                <div class="col-md-6">
+                    <div class="ct-panel">
+                      <h4 class="sub-title">
+                        <span>Growth Opportunity</span>
+                      </h4>
+                      <div class="graph-content">
+                        <iframe height="315" src="https://www.knowi.com/w/y59cSU5wZp0aH8cI2uEh01eYiiJlBhIDwYWbGjU9TFrMie" frameborder="0"
+                          allowfullscreen></iframe>
+  
+                      </div>
+                    </div>
+                  </div>
 
               </div>
             </div>
-
+            
           </div>
         </div>
       </div>
