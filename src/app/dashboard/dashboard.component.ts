@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
   public togglevalue = true;
   selectedItem = { 'name': 'M & M App Users', 'value': this.mahindraUsers };
   groups = [{ 'name': 'M & M App Users', 'value': this.mahindraUsers }, { 'name': 'Non M & M', 'value': this.nonMahindraUsers }
-    , { 'name': 'No Tracktors', 'value': this.mahindraUsers }, { 'name': 'Frequently leasing member', 'value': this.leasers }];
+    , { 'name': 'No Tractors', 'value': this.withoutTractors }, { 'name': 'Frequently leasing member', 'value': this.leasers }];
   constructor(private httpService: HttpService, private render: Renderer) { }
 
   ngOnInit() {
@@ -78,11 +78,11 @@ export class DashboardComponent implements OnInit {
       console.log(count);
       console.log(noTractors);
       console.log(nonMahindraUsers);
-      this.mahindraUsers = count.length;
+      this.mahindraUsers = this.tractorBrands.length;
       this.withoutTractors = noTractors.length;
-      this.nonMahindraUsers = nonMahindraUsers.length;
+      this.nonMahindraUsers = '' + (this.tractorBrands.length - nonMahindraUsers.length - noTractors.length);
       this.groups = [{ 'name': 'M & M App Users', 'value': this.mahindraUsers }, { 'name': 'Non M & M', 'value': this.nonMahindraUsers }
-      , { 'name': 'No Tracktors', 'value': this.mahindraUsers }, { 'name': 'Frequently leasing member', 'value': this.leasers }];
+      , { 'name': 'No Tractors', 'value': this.withoutTractors }, { 'name': 'Frequently leasing member', 'value': this.leasers }];
     });
   }
   public listClick(event: any, newValue) {
